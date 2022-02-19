@@ -2,11 +2,9 @@ FROM node:16-alpine As development
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY . . 
 
-RUN npm install --only=development
-
-COPY . .
+RUN npm install
 
 RUN npm run build \
   && npm prune --production
