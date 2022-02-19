@@ -4,12 +4,13 @@ const getCatGif = async (
     urls: string[], 
     setUrls: React.Dispatch<React.SetStateAction<string[]>>
   ): Promise<void> => {
-  let apiResp: {url: string}
+  let apiResp: string
   try {
     let { data } = await axios.get(process.env.REACT_APP_BACKEND_URL + "/cats/cat-gif")
     apiResp = data
-    urls.push(apiResp.url)
-    setUrls(urls)
+    let newUrls = urls.slice()
+    newUrls.push(apiResp)
+    setUrls(newUrls)
   } catch (error) {
     throw new Error(`Error fetching image`)
   }
