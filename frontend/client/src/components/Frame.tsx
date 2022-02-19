@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { Col, Row } from "react-bootstrap";
-import Footer from "./Footer";
 
 type FrameProps = {
   children: {
@@ -18,7 +17,7 @@ const Frame = ({ children: { header, main, footer } }: FrameProps) => {
           <>
             {header}
             {main}
-            {footer ? { footer } : <Footer />}
+            {footer}
           </>
       </Col>
 
