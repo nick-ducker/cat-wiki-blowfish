@@ -6,7 +6,7 @@ const getCatGif = async (
   ): Promise<void> => {
   let apiResp: string
   try {
-    let { data } = await axios.get(process.env.REACT_APP_BACKEND_URL + "/cats/cat-gif")
+    let { data } = await axios.get(`https://lit-gorge-16981.herokuapp.com/cats/cat-gif`)
     apiResp = data
     let newUrls = urls.slice()
     newUrls.push(apiResp)

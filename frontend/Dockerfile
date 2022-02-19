@@ -18,12 +18,14 @@ FROM node:16-alpine as production
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY ./package.json ./
 
-COPY --from=development /usr/src/app/build /usr/src/app/client/build
+COPY --from=development /app/build /app/client/build
 
 RUN npm install
+
+COPY ./server.js .
 
 CMD ["node", "server.js"]
