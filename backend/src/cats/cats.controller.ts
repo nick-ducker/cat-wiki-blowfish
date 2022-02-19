@@ -22,64 +22,64 @@ export class CatsController {
     }
   }
 
-  @Post('/favorite-cat')
-  async favoriteCat(
-    @Body() favoriteCat: FavoriteCatDto,
-  ): Promise<void> {
-    try {
+  // @Post('/favorite-cat')
+  // async favoriteCat(
+  //   @Body() favoriteCat: FavoriteCatDto,
+  // ): Promise<void> {
+  //   try {
       
-    } catch (error) {
+  //   } catch (error) {
       
-    } finally {
+  //   } finally {
       
-    }
-  }
+  //   }
+  // }
 
-  @Get('/all-favorites')
-  async allFavorites(): Promise<string[]> {
-    try {
+  // @Get('/all-favorites')
+  // async allFavorites(): Promise<string[]> {
+  //   try {
       
-    } catch (error) {
+  //   } catch (error) {
       
-    } finally {
+  //   } finally {
       
-    }
-  }
+  //   }
+  // }
 
-  @Get('/breedIds')
-  async getBreedIds(): Promise<{id: string, name: string}[]> {
-    try {
+  // @Get('/breedIds')
+  // async getBreedIds(): Promise<{id: string, name: string}[]> {
+  //   try {
       
-    } catch (error) {
+  //   } catch (error) {
       
-    } finally {
+  //   } finally {
       
-    }
-  }
+  //   }
+  // }
 
-  @Get('/breedDetails')
-  async getBreedIds(
-    @Body() id: string,
-  ): Promise<BreedDetails> {
-    try {
+  // @Get('/breedDetails')
+  // async getBreedIds(
+  //   @Body() id: string,
+  // ): Promise<BreedDetails> {
+  //   try {
       
-    } catch (error) {
+  //   } catch (error) {
       
-    } finally {
+  //   } finally {
       
-    }
-  }
+  //   }
+  // }
 
-  @Get('/breedImage')
-  async getBreedIds(
-    @Body() id: string,
-  ): Promise<string> {
-    try {
-    } catch (error) {
+  // @Get('/breedImage')
+  // async getBreedIds(
+  //   @Body() id: string,
+  // ): Promise<string> {
+  //   try {
+  //   } catch (error) {
       
-    } finally {
+  //   } finally {
       
-    }
-  }
+  //   }
+  // }
 
 }
