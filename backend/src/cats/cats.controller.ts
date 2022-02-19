@@ -4,18 +4,21 @@ import { CatsService } from './cats.service';
 @Controller('cats')
 export class CatsController {
   constructor(
-    private readonly catsSevice: CatsService
+    private readonly catsService: CatsService
   ){}
   private readonly logger = new Logger(CatsController.name);
 
   @Get('/cat-gif')
   async getCatGif(): Promise<string> {
     try {
-      
+      this.logger.log("getting kitty gif")
+      let url = await this.catsService.getCatGif();
+      return url
     } catch (error) {
-      
+      this.logger.error(error)
+      return error
     } finally {
-      
+      this.logger.log("done")
     }
   }
 
