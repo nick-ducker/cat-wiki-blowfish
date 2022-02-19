@@ -29,10 +29,14 @@ function App() {
           <>
             <Header />
             <CatCarousel urls={urls}/>
-            <Button 
-              variant="primary"
-              onClick={handleGetCatGif}  
-            >More Cats!</Button>
+            <div 
+              className='d-flex justify-content-center mt-5'
+            >
+              <Button 
+                variant="primary"
+                onClick={handleGetCatGif}  
+              >More Cats!</Button>
+            </div>
           </>
         )
       }}
