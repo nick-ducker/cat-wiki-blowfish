@@ -5,8 +5,13 @@ import Header from './components/Header';
 import Frame from './components/Frame';
 import CatCarousel from './components/CatCarousel';
 import { getCatGif } from './utils/catApi';
+import { Button } from 'react-bootstrap';
 
 let [urls, setUrls] = useState([''])
+
+const handleGetCatGif = async () => {
+  getCatGif(urls, setUrls)
+}
 
 useEffect(() =>{
   getCatGif(urls, setUrls)
@@ -20,6 +25,10 @@ function App() {
           <>
             <Header />
             <CatCarousel urls={urls}/>
+            <Button 
+              variant="primary"
+              onClick={handleGetCatGif}  
+            >More Cats!</Button>
           </>
         )
       }}
