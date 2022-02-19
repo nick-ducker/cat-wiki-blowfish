@@ -1,12 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Frame from './components/Frame';
 
 
 function App() {
   return (
-    null
+    <Frame
+      children={{
+        main: (
+          <>
+            <Header />
+          </>
+        )
+      }}
+    />
   );
 }
 
