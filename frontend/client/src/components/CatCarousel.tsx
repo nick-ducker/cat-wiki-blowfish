@@ -16,9 +16,13 @@ const CatCarousel = ({ urls }: { urls:string[] }) => {
   return (
     <>
       {urls.length === 1 ? (
-      <>
-        <img src={urls[0]} />
-      </>
+      <div
+        className='d-flex justify-content-center'
+      >
+        <img 
+          src={urls[0]} 
+        />
+      </div>
       ) : (
       <>
     <Carousel>
