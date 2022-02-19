@@ -21,10 +21,12 @@ services:
       context: ./frontend
       target: development
     volumes:
-      - ./frontend/client:/usr/src/app
+      - ./frontend/client:/app
       - /usr/src/app/node_modules
     ports:
       - 3000:3000
     command: sh -c "npm run start"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
     env_file:
       - ./frontend/client/.env.development
