@@ -25,6 +25,6 @@ services:
       - /usr/src/app/node_modules
     ports:
       - 3000:3000
-    command: sh -c "yarn && npm run start"
+    command: sh -c "npm run start"
     env_file:
       - ./frontend/client/.env.development
