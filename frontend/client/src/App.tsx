@@ -7,17 +7,21 @@ import CatCarousel from './components/CatCarousel';
 import { getCatGif } from './utils/catApi';
 import { Button } from 'react-bootstrap';
 
-let [urls, setUrls] = useState([''])
-
-const handleGetCatGif = async () => {
-  getCatGif(urls, setUrls)
-}
-
-useEffect(() =>{
-  getCatGif(urls, setUrls)
-}, [])
 
 function App() {
+  const initialState: string[] = []
+  let [urls, setUrls] = useState(initialState)
+  
+  const handleGetCatGif = async () => {
+    getCatGif(urls, setUrls)
+  }
+  
+  useEffect(() =>{
+    if(urls.length === 0) {
+      getCatGif(urls, setUrls)
+    }
+  }, [])
+  
   return (
     <Frame
       children={{
